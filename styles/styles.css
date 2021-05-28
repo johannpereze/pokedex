@@ -70,6 +70,59 @@ main {
   background-color: var(--poke-glass);
 }
 
+.controls {
+  background-color: var(--poke-dark-red);
+  padding: 1rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin: 1rem;
+}
+.controls__ball {
+  display: flex;
+  flex-direction: column;
+}
+.controls__ball--upper {
+  height: 10rem;
+  width: 20rem;
+  background-color: var(--poke-red);
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  border-bottom: 1rem solid black;
+}
+.controls__ball--bottom {
+  height: 10rem;
+  width: 20rem;
+  background-color: white;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  border-top: 1rem solid black;
+}
+.controls__ball--center {
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  margin: 7.5rem;
+}
+.controls__ball--center::after {
+  content: "";
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  margin: 1rem;
+}
+
 footer {
   display: flex;
   background-color: var(--poke-dark-gray);
