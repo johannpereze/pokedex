@@ -30,12 +30,33 @@
           <div class="pokedexUpperModule">
             <i class="fab fa-quinscape"></i>
           </div>
-          <div class="screen"></div>
+          <div class="screen">
+            <div class="sprite" id="sprite"></div>
+            <div class="sprite" id="name"></div>
+            <div class="sprite" id="number"></div>
+            <div class="sprite" id="type"></div>
+            <div class="sprite" id="basicStats">
+              <div class="stat1"></div>
+              <div class="stat1"></div>
+              <div class="stat2"></div>
+              <div class="stat3"></div>
+              <div class="stat4"></div>
+              <div class="stat5"></div>
+            </div>
+          </div>
           <div class="controls">
-            <div class="controls__ball">
-              <div class="controls__ball--upper"></div>
-              <div class="controls__ball--center"></div>
-              <div class="controls__ball--bottom"></div>
+            <div class="goButton">
+              <a href="javascript:responsePokeApi()">Go!</a>
+            </div>
+            <div class="pokeBall">
+              <div class="controls__ball">
+                <div class="controls__ball--upper"></div>
+                <div class="controls__ball--center"></div>
+                <div class="controls__ball--bottom"></div>
+              </div>
+            </div>
+            <div class="goButton">
+              <a href="javascript:responsePokeApi()">Go!</a>
             </div>
           </div>
         </div>
@@ -60,5 +81,7 @@
         ></a>
       </div>
     </footer>
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
