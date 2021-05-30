@@ -70,7 +70,7 @@ main {
   background-color: var(--poke-glass);
 }
 .controls{
-  background-color: blue;
+  background-color: var(--poke-red);
   display: flex;
   justify-content: space-around;
 }
@@ -128,11 +128,24 @@ main {
   margin: 1rem;
 }
 .goButton{
-  background-color: chartreuse;
+  background-color: var(--poke-dark-gray);
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(49, 49, 49);
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  
+
+}
+.goButton a{
+  
+  color: white;
+  text-decoration: none;
+  
 }
 
 footer {
