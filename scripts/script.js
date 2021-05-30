@@ -1,14 +1,5 @@
-// let pokemonID = 150;
-
-// console.log(document.getElementById('inputNumber').value)
-
-// // function pokeID() {
-//   var pokemonID = document.getElementById('inputNumber').value;
-//   // return pokemonID
-//   // }
-
 responsePokeApi = () => {
-  var pokemonID = document.getElementById('inputNumber').value;
+  let pokemonID = document.getElementById('inputNumber').value;
   
   var settings = {
     url: `https://pokeapi.co/api/v2/pokemon/${pokemonID}/`,
