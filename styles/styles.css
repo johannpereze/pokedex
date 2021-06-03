@@ -13,11 +13,10 @@
 }
 html {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  
   font-size: 1.6rem;
   background-color: var(--poke-light-gray);
 }
@@ -65,12 +64,87 @@ main {
   color: var(--poke-dark-gray);
   margin: 1rem;
 }
+
+/*******************************************************************/
 .screen {
   width: 86%;
-  height: 50rem;
+  height: 40rem;
   background-color: var(--poke-glass);
+  overflow: scroll;
+  }
+
+.screenRow1{
+display: flex;
+justify-content: space-between;
+padding: 1rem;
+align-items: center;
 }
-.controls{
+.screenRow1Left{
+  background-color: #49BEAA;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 60%;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.numberTypeContainer{
+  background-color: white;
+  border-radius: 0.5rem;
+  display:flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+}
+
+.name{
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+.spriteContainer{
+  background-color: rgb(221, 243, 122);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 10rem;
+  height: 10rem;
+
+}
+.sprite {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.basicStats{
+  margin: 1rem;
+  display: flex;
+  background-color: var(--poke-light-gray);
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+.basicStats p{
+  margin-right: 1rem;
+  
+  
+}
+.basicStats > div{
+  background-color:#C3E9E3;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  min-width: 12rem;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.basicStats > div:last-child{
+  margin-bottom: 1rem;
+}
+
+/************************************************************************/
+.controls {
   background-color: var(--poke-red);
   display: flex;
   justify-content: space-around;
@@ -83,7 +157,6 @@ main {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   margin: 1rem;
-  
 }
 .controls__ball {
   display: flex;
@@ -128,7 +201,7 @@ main {
   border-bottom-right-radius: 1.5rem;
   margin: 1rem;
 }
-.goButton{
+.goButton {
   background-color: var(--poke-dark-gray);
   width: 4rem;
   height: 4rem;
@@ -139,16 +212,13 @@ main {
   align-items: center;
   border: 2px solid rgb(49, 49, 49);
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-  
-
 }
-.goButton a{
-  
+.goButton a {
   color: white;
   text-decoration: none;
-  
 }
 
+/**********************************************************************/
 footer {
   display: flex;
   background-color: var(--poke-dark-gray);
