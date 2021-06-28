@@ -1,28 +1,36 @@
-const path = require("path");
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const babelRules = {
-  test: /\.m?js$/,
-  exclude: /node_modules/,
-  use: {
-    loader: "babel-loader",
-    options: {
-      presets: ["@babel/preset-env"],
-      plugins: ["@babel/plugin-transform-runtime"],
-    },
-  },
-};
 
 module.exports = {
-  //aquí podemos poner un entry: si no queremos usar el './src/index.js',  por defecto
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js", //aquí es posible que necesites un [contenthash]
-    assetModuleFilename: "assets/images/[hash][ext][query]",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
   },
   resolve: {
-    extensions: [".js"], //aquí le decimos qué extensiones vamos a estar utilizando
+    extensions: ['.js']
   },
   module: {
-    rules: [babelRules],
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
+      }
+    ]
   },
-};
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./public/index.html",
+      filename: "./index.html",
+    }),
+  ],
+}
