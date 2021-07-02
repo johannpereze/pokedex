@@ -7,10 +7,10 @@ const PokeInfo = async () => {
   const view = `
   <div class="social-menu">
     <div class="social-men__favorites">
-      <img src="favorite" alt="favorite-button">
+      <img src="./assets/images/icons/favorite.svg" alt="favorite-button">
     </div>
     <div class="social-men__share">
-      <img src="share" alt="share-button">
+      <img src="./assets/images/icons/share.svg" alt="share-button">
     </div>
   </div>
   <div class="poke-info">
