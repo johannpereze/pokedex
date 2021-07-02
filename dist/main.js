@@ -37,7 +37,83 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nfunction resolveAfter2Seconds() {\n  return new Promise(function (resolve) {\n    setTimeout(function () {\n      resolve('resolved');\n    }, 2000);\n  });\n}\n\nfunction asyncCall() {\n  return _asyncCall.apply(this, arguments);\n}\n\nfunction _asyncCall() {\n  _asyncCall = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var result;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            console.log('calling');\n            _context.next = 3;\n            return resolveAfter2Seconds();\n\n          case 3:\n            result = _context.sent;\n            console.log(result); // expected output: \"resolved\"\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _asyncCall.apply(this, arguments);\n}\n\nasyncCall();\n\n//# sourceURL=webpack://pokedex/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes */ \"./src/routes/index.js\");\n\nwindow.addEventListener('load', _routes__WEBPACK_IMPORTED_MODULE_0__.default);\nwidows.addEventListener('hashchange', _routes__WEBPACK_IMPORTED_MODULE_0__.default);\n\n//# sourceURL=webpack://pokedex/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Error404.js":
+/*!*******************************!*\
+  !*** ./src/pages/Error404.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar Error404 = function Error404() {\n  var view = \"\\n    <div class=\\\"error404\\\">\\n        <h2>Error 404</h2>\\n    </div>\\n    \";\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Error404);\n\n//# sourceURL=webpack://pokedex/./src/pages/Error404.js?");
+
+/***/ }),
+
+/***/ "./src/pages/home.js":
+/*!***************************!*\
+  !*** ./src/pages/home.js ***!
+  \***************************/
+/***/ (() => {
+
+eval("var Home = function Home() {\n  var view = \"\\n        //header-ball\\n        //social-menu\\n        //menu-box\\n        //menu-box--number-search\\n        //menu-box\\n        //nav-bar\\n    \";\n};\n\n//# sourceURL=webpack://pokedex/./src/pages/home.js?");
+
+/***/ }),
+
+/***/ "./src/routes/index.js":
+/*!*****************************!*\
+  !*** ./src/routes/index.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _templates_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../templates/header */ \"./src/templates/header.js\");\n/* harmony import */ var _templates_pokeInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../templates/pokeInfo */ \"./src/templates/pokeInfo.js\");\n/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/home */ \"./src/pages/home.js\");\n/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_pages_home__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _pages_Error404__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/Error404 */ \"./src/pages/Error404.js\");\n/* harmony import */ var _utils_getHash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/getHash */ \"./src/utils/getHash.js\");\n/* harmony import */ var _utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/resolveRoutes */ \"./src/utils/resolveRoutes.js\");\n\n\n\n\n\n\n\n\nvar routes = {\n  '/': (_pages_home__WEBPACK_IMPORTED_MODULE_4___default()),\n  '/:id': _templates_pokeInfo__WEBPACK_IMPORTED_MODULE_3__.default\n};\n\nvar router = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var header, content, hash, route, render;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            header =  false || document.getElementById('header');\n            content =  false || document.getElementById('content');\n            _context.next = 4;\n            return (0,_templates_header__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n          case 4:\n            header.innerHTML = _context.sent;\n            hash = (0,_utils_getHash__WEBPACK_IMPORTED_MODULE_6__.default)();\n            _context.next = 8;\n            return (0,_utils_resolveRoutes__WEBPACK_IMPORTED_MODULE_7__.default)(hash);\n\n          case 8:\n            route = _context.sent;\n            render = routes[route] ? routes[route] : _pages_Error404__WEBPACK_IMPORTED_MODULE_5__.default;\n            _context.next = 12;\n            return render();\n\n          case 12:\n            content.innerHTML = _context.sent;\n\n          case 13:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function router() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);\n\n//# sourceURL=webpack://pokedex/./src/routes/index.js?");
+
+/***/ }),
+
+/***/ "./src/templates/header.js":
+/*!*********************************!*\
+  !*** ./src/templates/header.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar Header = function Header() {\n  var view = \"\\n  <div class=\\\"header-ball\\\">\\n    <div class=\\\"header-ball__artwork\\\">\\n    <span class=\\\"back-arrow\\\"></span>\\n      <img src=\\\"artwork\\\" alt=\\\"name\\\">\\n      <div class=\\\"header-ball__button\\\">\\n        <img src=\\\"sprite\\\" alt=\\\"name\\\">\\n      </div>\\n    </div>\\n  </div>\";\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://pokedex/./src/templates/header.js?");
+
+/***/ }),
+
+/***/ "./src/templates/pokeInfo.js":
+/*!***********************************!*\
+  !*** ./src/templates/pokeInfo.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar PokeInfo = function PokeInfo() {\n  var view = \"\\n  <div class=\\\"social-menu\\\">\\n    <div class=\\\"social-men__favorites\\\">\\n      <img src=\\\"favorite\\\" alt=\\\"favorite-button\\\">\\n    </div>\\n    <div class=\\\"social-men__share\\\">\\n      <img src=\\\"share\\\" alt=\\\"share-button\\\">\\n    </div>\\n  </div>\\n  <div class=\\\"poke-info\\\">\\n    <div class=\\\"poke-info__name\\\">\\n      <h1>name</h1>\\n    </div>\\n    <div class=\\\"poke-info__type\\\">\\n      <span><img src=\\\"\\\" alt=\\\"\\\"></span>\\n      <p>type</p>\\n    </div>\\n    <div class=\\\"characteristics\\\">\\n      <div class=\\\"characteristics__characteristic1\\\">\\n        <span></span>\\n        <div class=\\\"characteristics__characteristic--name\\\"></div>\\n        <div class=\\\"characteristics__characteristic--value\\\"></div>\\n      </div>\\n      <div class=\\\"characteristics__characteristic2\\\">\\n        <span></span>\\n        <div class=\\\"characteristics__characteristic--name\\\"></div>\\n        <div class=\\\"characteristics__characteristic--value\\\"></div>\\n      </div>\\n      <div class=\\\"characteristics__characteristic3\\\">\\n        <span></span>\\n        <div class=\\\"characteristics__characteristic--name\\\"></div>\\n        <div class=\\\"characteristics__characteristic--value\\\"></div>\\n      </div>\\n      <div class=\\\"characteristics__characteristic4\\\">\\n        <span></span>\\n        <div class=\\\"characteristics__characteristic--name\\\"></div>\\n        <div class=\\\"characteristics__characteristic--value\\\"></div>\\n      </div>\\n      <div class=\\\"characteristics__characteristic5\\\">\\n        <span></span>\\n        <div class=\\\"characteristics__characteristic--name\\\"></div>\\n        <div class=\\\"characteristics__characteristic--value\\\"></div>\\n      </div>\\n    </div>\\n  </div>\\n    \";\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PokeInfo);\n\n//# sourceURL=webpack://pokedex/./src/templates/pokeInfo.js?");
+
+/***/ }),
+
+/***/ "./src/utils/getHash.js":
+/*!******************************!*\
+  !*** ./src/utils/getHash.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar getHash = function getHash() {\n  return location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHash);\n\n//# sourceURL=webpack://pokedex/./src/utils/getHash.js?");
+
+/***/ }),
+
+/***/ "./src/utils/resolveRoutes.js":
+/*!************************************!*\
+  !*** ./src/utils/resolveRoutes.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes */ \"./src/routes/index.js\");\n\n\nvar resolveRoutes = function resolveRoutes() {\n  if (_routes__WEBPACK_IMPORTED_MODULE_0__.default.length <= 3) {\n    var validRoute = route === '/' ? route : '/:id';\n    return validRoute;\n  }\n\n  return \"/\".concat(route);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (resolveRoutes);\n\n//# sourceURL=webpack://pokedex/./src/utils/resolveRoutes.js?");
 
 /***/ }),
 
