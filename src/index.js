@@ -1,4 +1,4 @@
-import router from './routes';
+import router from './routes/index';
 
 window.addEventListener('load', router);
-widows.addEventListener('hashchange',router)
+window.addEventListener('hashchange',router)
