@@ -59,7 +59,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar Home = function Home() {\n  var view = \"\\n        <div class=\\\"social-menu\\\">\\n            <a href=\\\"https://github.com/johannpereze/\\\" target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/github.svg\\\" alt=\\\"github\\\"></a><a href=\\\"https://www.youtube.com/c/JohannPerezE\\\"  target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/youtube.svg\\\" alt=\\\"youtube\\\"></a><a href=\\\"https://www.instagram.com/johannpereze/\\\" target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/instagram.svg\\\" alt=\\\"instagram\\\"></a>\\n        </div>\\n        <div><a href=\\\"#/1/\\\">Busca al azar</a></div>\\n        <div>Busca por n\\xFAmero</div>\\n    \";\n  return view;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://pokedex/./src/pages/Home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utils_randomId__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/randomId */ \"./src/utils/randomId.js\");\n\n\n\n\nvar Home = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {\n    var Id, view;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0,_utils_randomId__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n          case 2:\n            Id = _context.sent;\n            view = \"\\n        <div class=\\\"social-menu\\\">\\n            <a href=\\\"https://github.com/johannpereze/\\\" target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/github.svg\\\" alt=\\\"github\\\"></a><a href=\\\"https://www.youtube.com/c/JohannPerezE\\\"  target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/youtube.svg\\\" alt=\\\"youtube\\\"></a><a href=\\\"https://www.instagram.com/johannpereze/\\\" target=\\\"_blank\\\"><img src=\\\"./assets/images/icons/instagram.svg\\\" alt=\\\"instagram\\\"></a>\\n        </div>\\n        <div><a href=\\\"#/\".concat(Id, \"/\\\">Busca al azar</a></div>\\n        <div>Busca por n\\xFAmero</div>\\n    \");\n            return _context.abrupt(\"return\", view);\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function Home() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://pokedex/./src/pages/Home.js?");
 
 /***/ }),
 
@@ -115,6 +115,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar getHash = function getHash() {\n  return location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHash);\n\n//# sourceURL=webpack://pokedex/./src/utils/getHash.js?");
+
+/***/ }),
+
+/***/ "./src/utils/randomId.js":
+/*!*******************************!*\
+  !*** ./src/utils/randomId.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar randomId = function randomId() {\n  var NUMBER_OF_POKEMONS = 649;\n  var id = Math.floor(Math.random() * NUMBER_OF_POKEMONS);\n  return id;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (randomId);\n\n//# sourceURL=webpack://pokedex/./src/utils/randomId.js?");
 
 /***/ }),
 
