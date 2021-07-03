@@ -1,0 +1,19 @@
+const API_GENDER = "https://pokeapi.co/api/v2/gender/"
+const SPECIES_NUMBER = 3;
+
+const getSpecies = async () =>{
+    for (let i = 1; i < SPECIES_NUMBER; i++) {
+        const element = array[i];
+        
+    }
+    const apiGenderUrl = `${API_GENDER}${i}`
+    try {
+        const responseSpecies = await fetch(apiSpeciesUrl);
+        const dataSpecies = await responseSpecies.json();
+        return dataSpecies;
+    } catch (error) {
+        console.log('Error:', error  );
+    }
+};
+
+export default getSpecies;

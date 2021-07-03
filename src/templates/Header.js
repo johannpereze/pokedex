@@ -3,7 +3,7 @@ import getHash from "../utils/getHash";
 
 const Header = async () => {
   const id = await getHash();
-  const pokemon = await getData(id); //aun no se como llamar a pikachu en la primera
+  const pokemon = await getData(id); 
   const headerImg = id === '/' ? './assets/images/pokedex.png' : pokemon.sprites.other["official-artwork"].front_default
   const backArrow = id === '/' ? '' : '<span class="back-arrow">flecha</span>';
   const view = `
