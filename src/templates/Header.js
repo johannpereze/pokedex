@@ -9,7 +9,7 @@ const Header = async () => {
   const view = `
   <div class="header-ball">
     <div class="header-ball__artwork">
-    <a href="/" class="back-arrow">${backArrow}</a>
+    <a href="#" class="back-arrow">${backArrow}</a>
      <img src="${headerImg}">
       <div class="header-ball__button">
         <img src="${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${pokemon.name}">
