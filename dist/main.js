@@ -37,7 +37,7 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes/index */ \"./src/routes/index.js\");\n\nwindow.addEventListener('load', _routes_index__WEBPACK_IMPORTED_MODULE_0__.default);\nwindow.addEventListener('hashchange', _routes_index__WEBPACK_IMPORTED_MODULE_0__.default);\n\n//# sourceURL=webpack://pokedex/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes/index */ \"./src/routes/index.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n\n\nwindow.addEventListener('load', _routes_index__WEBPACK_IMPORTED_MODULE_0__.default);\nwindow.addEventListener('hashchange', _routes_index__WEBPACK_IMPORTED_MODULE_0__.default);\n\n//# sourceURL=webpack://pokedex/./src/index.js?");
 
 /***/ }),
 
@@ -148,6 +148,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar resolveRoutes = function resolveRoutes(route) {\n  if (route.length <= 3) {\n    var validRoute = route === '/' ? route : '/:id';\n    return validRoute;\n  }\n\n  return \"/\".concat(route);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (resolveRoutes);\n\n//# sourceURL=webpack://pokedex/./src/utils/resolveRoutes.js?");
+
+/***/ }),
+
+/***/ "./src/styles/style.scss":
+/*!*******************************!*\
+  !*** ./src/styles/style.scss ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://pokedex/./src/styles/style.scss?");
 
 /***/ }),
 
