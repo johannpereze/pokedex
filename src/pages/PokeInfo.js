@@ -23,38 +23,44 @@ const PokeInfo = async () => {
     </div>
     <div class="poke-info__type">
       <span><img src="" alt=""></span>
-      <p>${pokemon.types[0].type.name}</p>
+      <h2>${pokemon.types[0].type.name}</h2>
     </div>
     <div class="characteristics">
       <div class="characteristics__characteristic1">
         <span></span>
-        <div class="characteristics__characteristic--name">Height</div>
-        <div class="characteristics__characteristic--value"><p>${(pokemon.height / 10)} m</p></div>
+        <div class="characteristics__characteristic--name"><h2>Height</h2></div>
+        <div class="characteristics__characteristic--value"><h3>${(pokemon.height / 10)} m</h3></div>
       </div>
       <div class="characteristics__characteristic2">
         <span></span>
-        <div class="characteristics__characteristic--name">Category</div>
-        <div class="characteristics__characteristic--value"><p>${species.genera[7].genus}</p></div>
+        <div class="characteristics__characteristic--name"><h2>Category</h2></div>
+        <div class="characteristics__characteristic--value"><h3>${species.genera[7].genus}</h3></div>
       </div>
       <div class="characteristics__characteristic3">
         <span></span>
-        <div class="characteristics__characteristic--name">Weight</div>
-        <div class="characteristics__characteristic--value"><p>${(pokemon.weight / 10)} Kg</p></div>
+        <div class="characteristics__characteristic--name"><h2>Weight</h2></div>
+        <div class="characteristics__characteristic--value"><h3>${(pokemon.weight / 10)} Kg</h3></div>
       </div>
       <div class="characteristics__characteristic4">
         <span></span>
-        <div class="characteristics__characteristic--name">Gender</div>
-        <div class="characteristics__characteristic--value"><p>${pokemon.name}</p></div>
+        <div class="characteristics__characteristic--name"><h2>Gender</h2></div>
+        <div class="characteristics__characteristic--value"><h3>${pokemon.name}</h3></div>
       </div>
       <div class="characteristics__characteristic5">
         <span></span>
-        <div class="characteristics__characteristic--name">Hability</div>
-        <div class="characteristics__characteristic--value"><p>${pokemon.abilities[0].ability.name}</p></div>
+        <div class="characteristics__characteristic--name"><h2>Hability</h2></div>
+        <div class="characteristics__characteristic--value"><h3>${pokemon.abilities[0].ability.name}</h3></div>
       </div>
     </div>
   </div>
-  <div class="description"><p>${species.flavor_text_entries[1].flavor_text}</p></div>
+  <div class="description">
+    <div class="description__title"><h2>Description</h2></div>
+    <div class="description__content"><p>${species.flavor_text_entries[1].flavor_text}</p></div>
+  </div>
   <section class="stats">
+    <div class="stats__title">
+      <h2>Statistics</h2>
+    </div>
     <div class="stat__name">
       <p>HP</p>
       <div class="stat__value">
