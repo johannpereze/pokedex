@@ -10,10 +10,10 @@ const PokeInfo = async () => {
   console.log(species);
   const view = `
   <div class="social-menu">
-    <div class="social-men__favorites">
+    <div class="social-menu__favorites">
       <img src="./assets/images/icons/favorite.svg" alt="favorite-button">
     </div>
-    <div class="social-men__share">
+    <div class="social-menu__share">
       <img src="./assets/images/icons/share.svg" alt="share-button">
     </div>
   </div>

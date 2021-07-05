@@ -1,12 +1,17 @@
 .header-ball {
-  height: 300px;
+  height: 230px;
   position: relative;
   background-color: $color-main;
   border-bottom: 13px solid $color-dark;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
   &__artwork {
     display: flex;
     justify-content: center;
+    position: relative;
     &--img {
+      position: absolute;
+      top: -20px;
       filter: $character-shadow;
       max-height: 300px;
       max-width: 90%;
@@ -18,14 +23,13 @@
     align-items: center;
     position: absolute;
     left: calc(50% - 45px);
-    top: 265px;
+    top: 185px;
     background-color: $color-white;
     width: 70px;
     height: 70px;
     border-radius: 50em;
     border: 10px solid #343434;
     img {
-      filter: $character-shadow;
       height: 50px;
     }
   }

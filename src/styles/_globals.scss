@@ -25,6 +25,15 @@ html {
 
 .social-menu {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8px;
+  a {
+    margin: 10px 10px 10px 0;
+  }
+  &__favorites, &__share{
+    margin-right: 15px;
+  }
 }
 
 .back-arrow {
