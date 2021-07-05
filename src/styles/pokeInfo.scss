@@ -90,13 +90,14 @@
     height: 34px;
     border-radius: 17em;
     background-color: $color-main;
+    box-shadow: $box-shadow-light;
     position: absolute;
     top: -17px;
     h2 {
       @include h2;
       color: $color-white;
-      margin: 5px 10px;
-      box-shadow: $box-shadow-light;
+      margin: 7px 15px;
+      
     }
   }
   &__content {
@@ -104,7 +105,7 @@
     @include box-default;
     p {
       @include p;
-      margin: 24px 20px 20px 20px;
+      margin: 30px 20px 20px 20px;
     }
   }
 }

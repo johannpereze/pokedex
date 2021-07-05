@@ -1,21 +1,23 @@
 .header-ball {
-  height: 230px;
-  position: relative;
-  margin: -13px -13px 0 -13px;
-  // overflow: hidden; aplicado al HTML
+  height: 750px;
+  width: 750px;
+  position: absolute;
+  left: calc(50% - 388px);
+  top: -580px;
+  margin: 0 auto;
   background-color: $color-main;
   border: 13px solid $color-dark;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-radius: 50%;
   &__artwork {
     display: flex;
     justify-content: center;
     position: relative;
+    
     &--img {
       position: absolute;
-      top: -20px;
+      top: 530px;
       filter: $character-shadow;
-      max-height: 300px;
+      max-height: 250px;
       max-width: 90%;
     }
   }
@@ -25,14 +27,14 @@
     align-items: center;
     position: absolute;
     left: calc(50% - 45px);
-    top: 185px;
+    top: 145px;
     background-color: $color-white;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50em;
     border: 10px solid #343434;
     img {
-      height: 50px;
+      width: 50px;
     }
   }
 }
