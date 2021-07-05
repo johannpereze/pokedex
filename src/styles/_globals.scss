@@ -12,7 +12,8 @@ $color-auxiliar-6: rgba(210, 48, 48, 1);
 
 /* Effect styles */
 $box-shadow-light: 0px 10px 40px rgba(0, 0, 0, 0.03);
-$box-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.15);
+$box-shadow-heavy: 0px 4px 6px rgba(0, 0, 0, 0.25);
 $character-shadow: drop-shadow(8px -6px 7px rgba(0, 0, 0, 0.25));
 
 /* Fonts*/
@@ -21,6 +22,7 @@ $font-secondary: "Open Sans", "Sans-serif";
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 .social-menu {
@@ -31,15 +33,20 @@ html {
   a {
     margin: 10px 10px 10px 0;
   }
-  &__favorites, &__share{
+  &__favorites,
+  &__share {
     margin-right: 15px;
   }
 }
 
 .back-arrow {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  padding: 10px;
   width: 24px;
   height: 24px;
+  a img {
+    margin: 0 auto;
+  }
 }
+
+

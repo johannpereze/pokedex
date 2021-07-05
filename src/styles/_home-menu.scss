@@ -1,0 +1,28 @@
+.home-menu {
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    width: 90%;
+  }
+  &__card {
+    padding: 13px 21px;
+    background-color: $color-white;
+    box-shadow: $box-shadow-medium;
+    border-radius: 20px;
+    &:hover{
+      box-shadow: $box-shadow-heavy;
+    }
+    h2 {
+      @include h2;
+      outline: none;
+      margin: 5px
+    }
+    h3 {
+      @include h3;
+      color: $color-main;
+      margin: 5px
+    }
+  }
+}
