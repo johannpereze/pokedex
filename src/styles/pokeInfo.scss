@@ -1,24 +1,32 @@
 .poke-info {
-  &__name h1 {
-    @include h1;
-    text-transform: capitalize;
+  &__name {
+    h1 {
+      @include h1;
+      text-transform: capitalize;
+    }
   }
-  &__type h2 {
-    @include h2;
-    font-weight: 400;
-    text-transform: capitalize;
+  &__type {
+    h2 {
+      @include h2;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
   }
 }
 
 .characteristics {
-  &__characteristic--name h2 {
-    @include h2;
-    text-transform: capitalize;
+  &__characteristic--name {
+    h2 {
+      @include h2;
+      text-transform: capitalize;
+    }
   }
-  &__characteristic--value h3 {
-    @include h3;
-    color: $color-main;
-    text-transform: capitalize;
+  &__characteristic--value {
+    h3 {
+      @include h3;
+      color: $color-main;
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -26,12 +34,16 @@
   &__title {
     background-color: $color-main;
   }
-  &__title h2 {
-    @include h2;
-    color: $color-white;
+  &__title {
+    h2 {
+      @include h2;
+      color: $color-white;
+    }
   }
-  &__content p {
-    @include p;
+  &__content {
+    p {
+      @include p;
+    }
   }
 }
 
@@ -39,14 +51,20 @@
   &__container {
     display: flex;
   }
-  &__title h2 {
-    @include h2;
+  &__title {
+    h2 {
+      @include h2;
+    }
   }
-  &__name h3 {
-    @include h3;
+  &__name {
+    h3 {
+      @include h3;
+    }
   }
-  &__value h3 {
-    @include h3;
-    padding-left: 0.5em;
+  &__value {
+    h3 {
+      @include h3;
+      padding-left: 0.5em;
+    }
   }
 }

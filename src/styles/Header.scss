@@ -1,0 +1,32 @@
+.header-ball {
+  height: 300px;
+  position: relative;
+  background-color: $color-main;
+  border-bottom: 13px solid $color-dark;
+  &__artwork {
+    display: flex;
+    justify-content: center;
+    &--img {
+      filter: $character-shadow;
+      max-height: 300px;
+      max-width: 90%;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 45px);
+    top: 265px;
+    background-color: $color-white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50em;
+    border: 10px solid #343434;
+    img {
+      filter: $character-shadow;
+      height: 50px;
+    }
+  }
+}

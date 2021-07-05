@@ -13,6 +13,7 @@ $color-auxiliar-6: rgba(210, 48, 48, 1);
 /* Effect styles */
 $box-shadow-light: 0px 10px 40px rgba(0, 0, 0, 0.03);
 $box-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.25);
+$character-shadow: drop-shadow(8px -6px 7px rgba(0, 0, 0, 0.25));
 
 /* Fonts*/
 $font-primary: "Poppins", "Sans-serif";
@@ -26,5 +27,10 @@ html {
   display: flex;
 }
 
-
-
+.back-arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+}
