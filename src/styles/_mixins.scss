@@ -34,3 +34,9 @@
   font-size: 1.4rem;
   font-weight: 400;
 }
+
+@mixin box-default {
+  background-color: $color-white;
+  border-radius: 16px;
+  box-shadow: $box-shadow-light;
+}

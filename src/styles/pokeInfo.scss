@@ -1,59 +1,124 @@
 .poke-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__name {
     h1 {
       @include h1;
       text-transform: capitalize;
+      margin: 10px 0 0px 0;
     }
   }
   &__type {
+    display: flex;
     h2 {
       @include h2;
       font-weight: 400;
       text-transform: capitalize;
+      margin-top: 5px;
     }
   }
 }
 
-.characteristics {
-  &__characteristic--name {
-    h2 {
-      @include h2;
-      text-transform: capitalize;
-    }
+.section {
+  &__characteristics {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: scroll;
+    margin-top: 15px;
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
   }
-  &__characteristic--value {
-    h3 {
-      @include h3;
-      color: $color-main;
-      text-transform: capitalize;
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
+    @include box-default;
+  }
+}
+
+.characteristics {
+  display: flex;
+  position: relative;
+  &__container {
+    overflow: visible;
+    position: relative;
+    height: 56px;
+    @include box-default;
+    margin: 0 15px;
+    span {
+      position: absolute;
+      top: 15px;
+      left: -14px;
+      width: 28px;
+      height: 28px;
+      background-color: $color-auxiliar-1;
+      border-radius: 50%;
+      box-shadow: $box-shadow-light;
+    }
+    &--name {
+      h2 {
+        @include h2;
+        text-transform: capitalize;
+        margin: 10px 27px 2px 27px;
+        text-align: center;
+      }
+    }
+    &--value {
+      h3 {
+        @include h3;
+        color: $color-main;
+        text-transform: capitalize;
+        margin: 2px 27px 10px 27px;
+        white-space: nowrap;
+        text-align: center;
+      }
     }
   }
 }
 
 .description {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   &__title {
+    height: 34px;
+    border-radius: 17em;
     background-color: $color-main;
-  }
-  &__title {
+    position: absolute;
+    top: -17px;
     h2 {
       @include h2;
       color: $color-white;
+      margin: 5px 10px;
+      box-shadow: $box-shadow-light;
     }
   }
   &__content {
+    width: 90%;
+    @include box-default;
     p {
       @include p;
+      margin: 24px 20px 20px 20px;
     }
   }
 }
 
 .stats {
+  
   &__container {
     display: flex;
+    margin: 20px 20px 20px 20px;
   }
   &__title {
     h2 {
       @include h2;
+      margin: 20px 20px 20px 20px;
     }
   }
   &__name {
