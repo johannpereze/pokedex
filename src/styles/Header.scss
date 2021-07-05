@@ -1,8 +1,10 @@
 .header-ball {
   height: 230px;
   position: relative;
+  margin: -13px -13px 0 -13px;
+  overflow: hidden;
   background-color: $color-main;
-  border-bottom: 13px solid $color-dark;
+  border: 13px solid $color-dark;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   &__artwork {

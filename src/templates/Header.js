@@ -14,11 +14,11 @@ const Header = async () => {
     <a href="#" class="back-arrow">${backArrow}</a>
     <div class="header-ball__artwork">
         <img class="header-ball__artwork--img" src="${headerImg}">
-        <div class="header-ball__button">
-        <img src="${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${pokemon.name}">
-      </div>
-    </div>
-  </div>`;
+        </div>
+        
+  </div><div class="header-ball__button">
+  <img src="${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${pokemon.name}">
+</div>`;
   return view;
 };
 
