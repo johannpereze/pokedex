@@ -11,49 +11,20 @@ $color-auxiliar-5: rgba(92, 188, 68, 1);
 $color-auxiliar-6: rgba(210, 48, 48, 1);
 
 /* Effect styles */
-$box-shadow-light:  0px 10px 40px rgba(0, 0, 0, 0.03);
-$box-shadow-medium:  0px 2px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-light: 0px 10px 40px rgba(0, 0, 0, 0.03);
+$box-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
 /* Fonts*/
-$font-primary: 'Poppins', 'Sans-serif';
-$font-secondary: 'Open Sans', 'Sans-serif';
+$font-primary: "Poppins", "Sans-serif";
+$font-secondary: "Open Sans", "Sans-serif";
 
-/* Text-size styles */
-/* base size: rem (10px) */
-$h1: 3rem;
-$h2: 1.8rem;
-$h3: 1.6rem;
-$p: 1.4rem;
-$rem: 1rem;
-
-
-body{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-h1{
-    font-family: $font-primary;
-    font-weight: bold;
-    color: $color-dark;
-    font-size: 3rem;
+.social-menu {
+  display: flex;
 }
 
-h2{
-    font-family: $font-primary;
-    font-weight: bold;
-    color: $color-dark;
-    font-size: 1.8rem;
-}
 
-h3{
-    font-family: $font-primary;
-    color: $color-dark;
-    font-size: 1.6rem;
-}
-
-p{
-    font-family: $font-secondary;
-    color: $color-dark;
-    font-size: 1.4rem;
-}
 

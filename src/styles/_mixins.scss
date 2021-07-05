@@ -1,0 +1,36 @@
+@mixin h1 {
+  font-family: $font-primary;
+  font-weight: bold;
+  color: $color-dark;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+@mixin h2 {
+  font-family: $font-primary;
+  font-weight: bold;
+  color: $color-dark;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@mixin h3 {
+  font-family: $font-primary;
+  color: $color-dark;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@mixin h4 {
+  font-family: $font-primary;
+  color: $color-dark;
+  font-size: 1.5        rem;
+  font-weight: 400;
+}
+
+@mixin p {
+  font-family: $font-secondary;
+  color: $color-dark;
+  font-size: 1.4rem;
+  font-weight: 400;
+}

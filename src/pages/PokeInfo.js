@@ -29,77 +29,89 @@ const PokeInfo = async () => {
       <div class="characteristics__characteristic1">
         <span></span>
         <div class="characteristics__characteristic--name"><h2>Height</h2></div>
-        <div class="characteristics__characteristic--value"><h3>${(pokemon.height / 10)} m</h3></div>
+        <div class="characteristics__characteristic--value"><h3>${
+          pokemon.height / 10
+        } m</h3></div>
       </div>
       <div class="characteristics__characteristic2">
         <span></span>
         <div class="characteristics__characteristic--name"><h2>Category</h2></div>
-        <div class="characteristics__characteristic--value"><h3>${species.genera[7].genus}</h3></div>
+        <div class="characteristics__characteristic--value"><h3>${
+          species.genera[7].genus
+        }</h3></div>
       </div>
       <div class="characteristics__characteristic3">
         <span></span>
         <div class="characteristics__characteristic--name"><h2>Weight</h2></div>
-        <div class="characteristics__characteristic--value"><h3>${(pokemon.weight / 10)} Kg</h3></div>
+        <div class="characteristics__characteristic--value"><h3>${
+          pokemon.weight / 10
+        } Kg</h3></div>
       </div>
       <div class="characteristics__characteristic4">
         <span></span>
         <div class="characteristics__characteristic--name"><h2>Gender</h2></div>
-        <div class="characteristics__characteristic--value"><h3>${pokemon.name}</h3></div>
+        <div class="characteristics__characteristic--value"><h3>${
+          pokemon.name
+        }</h3></div>
       </div>
       <div class="characteristics__characteristic5">
         <span></span>
         <div class="characteristics__characteristic--name"><h2>Hability</h2></div>
-        <div class="characteristics__characteristic--value"><h3>${pokemon.abilities[0].ability.name}</h3></div>
+        <div class="characteristics__characteristic--value"><h3>${
+          pokemon.abilities[0].ability.name
+        }</h3></div>
       </div>
     </div>
   </div>
   <div class="description">
     <div class="description__title"><h2>Description</h2></div>
-    <div class="description__content"><p>${species.flavor_text_entries[1].flavor_text}</p></div>
-  </div>
-  <section class="stats">
+    <div class="description__content"><p>${
+      species.flavor_text_entries[1].flavor_text
+    }</p></div>
+  </div>  
+  <section class="stats">  
     <div class="stats__title">
       <h2>Statistics</h2>
     </div>
-    <div class="stat__name">
-      <p>HP</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[0].base_stat}</p>
-      </div>
-    </div>
-    <div class="stat__name">
-      <p>Attack</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[1].base_stat}</p>
-      </div>
-    </div>
-    <div class="stat__name">
-      <p>Defense</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[2].base_stat}</p>
-      </div>
-    </div>
-    <div class="stat__name">
-      <p>Special Attack</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[3].base_stat}</p>
-      </div>
-    </div>
-    <div class="stat__name">
-      <p>Special Defense</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[4].base_stat}</p>
-      </div>
-    </div>
-    <div class="stat__name">
-      <p>Speed</p>
-      <div class="stat__value">
-        <p>${pokemon.stats[5].base_stat}</p>
-      </div>
-    </div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>HP:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[0].base_stat}</h3>
+      </div></div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>Attack:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[1].base_stat}</h3>
+      </div></div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>Defense:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[2].base_stat}</h3>
+      </div></div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>Special Attack:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[3].base_stat}</h3>
+      </div></div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>Special Defense:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[4].base_stat}</h3>
+      </div></div>
+    <div class="stats__container"><div class="stats__name">
+      <h3>Speed:</h3>
+      
+    </div><div class="stats__value">
+        <h3>${pokemon.stats[5].base_stat}</h3>
+      </div></div>    
   </section>
     `;
-    return view;
+  return view;
 };
 
 export default PokeInfo;
