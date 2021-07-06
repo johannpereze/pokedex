@@ -29,35 +29,35 @@ const PokeInfo = async () => {
   <div class="section__characteristics">
     <div class="characteristics">
       <div class="characteristics__container">
-        <span></span>
+        <span class="characteristics__container--icon1"></span>
         <div class="characteristics__container--name"><h2>Height</h2></div>
         <div class="characteristics__container--value"><h3>${
           pokemon.height / 10
         } m</h3></div>
       </div>
       <div class="characteristics__container">
-        <span></span>
+        <span class="characteristics__container--icon2"></span>
         <div class="characteristics__container--name"><h2>Category</h2></div>
         <div class="characteristics__container--value"><h3>${
           species.genera[7].genus
         }</h3></div>
       </div>
       <div class="characteristics__container">
-        <span></span>
+        <span class="characteristics__container--icon3"></span>
         <div class="characteristics__container--name"><h2>Weight</h2></div>
         <div class="characteristics__container--value"><h3>${
           pokemon.weight / 10
         } Kg</h3></div>
       </div>
       <div class="characteristics__container">
-        <span></span>
+        <span class="characteristics__container--icon4"></span>
         <div class="characteristics__container--name"><h2>Gender</h2></div>
         <div class="characteristics__container--value"><h3>${
           pokemon.name
         }</h3></div>
       </div>
       <div class="characteristics__container">
-        <span></span>
+        <span class="characteristics__container--icon5"></span>
         <div class="characteristics__container--name"><h2>Hability</h2></div>
         <div class="characteristics__container--value"><h3>${
           pokemon.abilities[0].ability.name

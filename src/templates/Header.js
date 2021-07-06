@@ -10,15 +10,18 @@ const Header = async () => {
       : pokemon.sprites.other["official-artwork"].front_default;
   const backArrow = id === "/" ? "" : '<img src="./assets/images/icons/arrow.svg" alt="back" class="back-arrow"></a> ';
   const view = `
-  <div class="header-ball">
-    <a href="#" class="back-arrow">${backArrow}</a>
-    <div class="header-ball__artwork">
-        <img class="header-ball__artwork--img" src="${headerImg}">
-        </div>
-        
-  </div><div class="header-ball__button">
-  <img src="${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${pokemon.name}">
-</div>`;
+  
+    <div class="header-ball">
+      <a href="#" class="back-arrow">${backArrow}</a>
+      <div class="header-ball__artwork">
+          <img class="header-ball__artwork--img" src="${headerImg}">
+          </div>
+          
+    </div><div class="header-ball__button">
+    <img src="${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${pokemon.name}">
+  </div>
+  
+  `;
   return view;
 };
 
