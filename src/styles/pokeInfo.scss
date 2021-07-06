@@ -58,9 +58,11 @@
       border-radius: 50%;
       box-shadow: $box-shadow-light;
     }
+
     &--icon1{
       background-color: $color-auxiliar-1;
-    }
+      // background-image: url("../assets/images/pokedex.png");
+     }
     &--icon2{
       background-color: $color-auxiliar-2;
     }
