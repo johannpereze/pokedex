@@ -1,6 +1,8 @@
 import getData from "../utils/getData";
 import getHash from "../utils/getHash";
 import getSpecies from "../utils/getSpecies";
+import logoPD from "../assets/images/pokedex.png"
+// import heightIcon from "../assets/images/icons/height.svg"
 
 const PokeInfo = async () => {
   const id = await getHash();
@@ -29,7 +31,7 @@ const PokeInfo = async () => {
   <div class="section__characteristics">
     <div class="characteristics">
       <div class="characteristics__container">
-        <span class="characteristics__container--icon1"></span>
+        <span class="characteristics__container--icon1" style="background-image: url(${logoPD});"></span>
         <div class="characteristics__container--name"><h2>Height</h2></div>
         <div class="characteristics__container--value"><h3>${
           pokemon.height / 10

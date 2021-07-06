@@ -1,12 +1,13 @@
 import getData from "../utils/getData";
 import getHash from "../utils/getHash";
+import logoPD from "../assets/images/pokedex.png"
 
 const Header = async () => {
   const id = await getHash();
   const pokemon = await getData(id);
   const headerImg =
     id === "/"
-      ? "./assets/images/pokedex.png"
+      ? logoPD
       : pokemon.sprites.other["official-artwork"].front_default;
   const backArrow = id === "/" ? "" : '<img src="./assets/images/icons/arrow.svg" alt="back" class="back-arrow"></a> ';
   const view = `

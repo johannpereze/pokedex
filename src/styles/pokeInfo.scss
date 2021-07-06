@@ -61,6 +61,9 @@
 
     &--icon1{
       background-color: $color-auxiliar-1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       // background-image: url("../assets/images/pokedex.png");
      }
     &--icon2{
