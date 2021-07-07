@@ -34,13 +34,13 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
               limit: 8192,
-            }
+            },
           },
         ],
-       type: 'javascript/auto'
+        type: "javascript/auto",//creo que no necesito esto ya que no estoy trabajando con assets module de webpack 5
       },
     ],
   },
