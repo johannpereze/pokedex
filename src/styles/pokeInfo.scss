@@ -58,27 +58,29 @@
       border-radius: 50%;
       box-shadow: $box-shadow-light;
     }
-
-    &--icon1{
-      background-color: $color-auxiliar-1;
-      background-size: cover;
+    &--icon {
+      background-size: 60%;
       background-repeat: no-repeat;
       background-position: center;
-      // background-image: url("../assets/images/pokedex.png");
-     }
-    &--icon2{
+      // background-image: url("../assets/images/pokedex.png"); esta propiedad la puse en el tag del template
+    }
+    //esto está muy feo. Lo tengo que arreglar
+    &--icon1 {
+      background-color: $color-auxiliar-1;
+    }
+    &--icon2 {
       background-color: $color-auxiliar-2;
     }
-    &--icon3{
+    &--icon3 {
       background-color: $color-auxiliar-3;
     }
-    &--icon4{
+    &--icon4 {
       background-color: $color-auxiliar-4;
     }
-    &--icon5{
+    &--icon5 {
       background-color: $color-auxiliar-5;
     }
-    
+
     &--name {
       h2 {
         @include h2;
