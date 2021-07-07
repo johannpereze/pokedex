@@ -122,3 +122,5 @@ const PokeInfo = async () => {
 };
 
 export default PokeInfo;
+
+
