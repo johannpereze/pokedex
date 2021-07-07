@@ -18,5 +18,5 @@ deploy:
   target branch: gh-pages
   commit_message: "Deploy Release"
   on:
-    branch: V2.0
+    branch: main
 
