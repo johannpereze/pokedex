@@ -2,6 +2,11 @@ import getData from "../utils/getData";
 import getHash from "../utils/getHash";
 import getSpecies from "../utils/getSpecies";
 import logoPD from "../assets/images/pokedex.png"
+// import heightIcon from "../assets/images/icons/height.png"
+// import heightIcon from "../assets/images/icons/height.png"
+// import heightIcon from "../assets/images/icons/height.png"
+// import heightIcon from "../assets/images/icons/height.png"
+// import heightIcon from "../assets/images/icons/height.png"
 // import heightIcon from "../assets/images/icons/height.svg"
 
 const PokeInfo = async () => {
