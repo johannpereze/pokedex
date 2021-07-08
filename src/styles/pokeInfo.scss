@@ -17,6 +17,12 @@
       text-transform: capitalize;
       margin-top: 5px;
     }
+    span{
+      margin: 0 5px;
+      img{
+        filter: $icon-shadow;
+      }
+    }
   }
 }
 

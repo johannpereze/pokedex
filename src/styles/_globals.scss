@@ -3,18 +3,19 @@ $background-light: rgba(245, 245, 245, 1);
 $color-white: rgba(255, 255, 255, 1);
 $color-main: rgba(250, 74, 12, 1);
 $color-dark: rgba(52, 52, 52, 1);
-$color-auxiliar-1: rgba(0, 160, 233, 1);
-$color-auxiliar-2: rgba(203, 91, 102, 1);
-$color-auxiliar-3: rgba(243, 152, 0, 1);
-$color-auxiliar-4: rgba(149, 10, 239, 1);
-$color-auxiliar-5: rgba(92, 188, 68, 1);
-$color-auxiliar-6: rgba(210, 48, 48, 1);
+$color-auxiliar-1: #4D90D5;
+$color-auxiliar-2: #CE4069;
+$color-auxiliar-3: #FF9C54;
+$color-auxiliar-4: #AB6AC8;
+$color-auxiliar-5: #A5CD55;
+$color-auxiliar-6: #F3D23B;
 
 /* Effect styles */
 $box-shadow-light: 0px 10px 40px rgba(0, 0, 0, 0.03);
 $box-shadow-medium: 0px 2px 4px rgba(0, 0, 0, 0.15);
 $box-shadow-heavy: 0px 4px 6px rgba(0, 0, 0, 0.25);
 $character-shadow: drop-shadow(8px -6px 7px rgba(0, 0, 0, 0.25));
+$icon-shadow: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
 
 /* Fonts*/
 $font-primary: "Poppins", "Sans-serif";
@@ -67,6 +68,23 @@ body {
     margin: 0 auto;
   }
 }
+
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   height: 5px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: rgba(0, 0, 0, 0.1);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: rgba(0, 0, 0, 0.2);
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: rgba(0, 0, 0, 0.3);
+// }
 
 ::-webkit-scrollbar {
   width: 5px;

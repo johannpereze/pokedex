@@ -1,18 +1,92 @@
 import getData from "../utils/getData";
 import getHash from "../utils/getHash";
 import getSpecies from "../utils/getSpecies";
-import logoPD from "../assets/images/pokedex.png"
-import heightIcon from "../assets/images/icons/height.png"
-import categoryIcon from "../assets/images/icons/category.png"
-import weightIcon from "../assets/images/icons/weight.png"
-import genderIcon from "../assets/images/icons/gender.png"
-import abilityIcon from "../assets/images/icons/ability.png" 
-
+import heightIcon from "../assets/images/icons/height.png";
+import categoryIcon from "../assets/images/icons/category.png";
+import weightIcon from "../assets/images/icons/weight.png";
+import genderIcon from "../assets/images/icons/gender.png";
+import abilityIcon from "../assets/images/icons/ability.png";
+import normal from "../assets/images/icons/normal.png";
+import fire from "../assets/images/icons/fire.png";
+import water from "../assets/images/icons/water.png";
+import grass from "../assets/images/icons/grass.png";
+import electric from "../assets/images/icons/electric.png";
+import ice from "../assets/images/icons/ice.png";
+import fighting from "../assets/images/icons/fighting.png";
+import poison from "../assets/images/icons/poison.png";
+import ground from "../assets/images/icons/ground.png";
+import flying from "../assets/images/icons/flying.png";
+import psychic from "../assets/images/icons/psychic.png";
+import bug from "../assets/images/icons/bug.png";
+import rock from "../assets/images/icons/rock.png";
+import ghost from "../assets/images/icons/ghost.png";
+import dark from "../assets/images/icons/dark.png";
+import dragon from "../assets/images/icons/dragon.png";
+import steel from "../assets/images/icons/steel.png";
+import fairy from "../assets/images/icons/fairy.png";
 
 const PokeInfo = async () => {
   const id = await getHash();
-  const pokemon = await getData(id); //${pokemon.}   ${species.}
+  const pokemon = await getData(id); 
   const species = await getSpecies(id);
+  let typeIcon;
+  switch (pokemon.types[0].type.name) {
+    case "normal":
+      typeIcon = normal;
+      break;
+    case "fire":
+      typeIcon = fire;
+      break;
+    case "water":
+      typeIcon = water;
+      break;
+    case "grass":
+      typeIcon = grass;
+      break;
+    case "electric":
+      typeIcon = electric;
+      break;
+    case "ice":
+      typeIcon = ice;
+      break;
+    case "fighting":
+      typeIcon = fighting;
+      break;
+    case "poison":
+      typeIcon = poison;
+      break;
+    case "ground":
+      typeIcon = ground;
+      break;
+    case "flying":
+      typeIcon = flying;
+      break;
+    case "psychic":
+      typeIcon = psychic;
+      break;
+    case "bug":
+      typeIcon = bug;
+      break;
+    case "rock":
+      typeIcon = rock;
+      break;
+    case "ghost":
+      typeIcon = ghost;
+      break;
+    case "dark":
+      typeIcon = dark;
+      break;
+    case "dragon":
+      typeIcon = dragon;
+      break;
+    case "steel":
+      typeIcon = steel;
+      break;
+    case "fairy":
+      typeIcon = fairy;
+      break;
+  }
+
   console.log(pokemon);
   console.log(species);
   const view = `
@@ -29,7 +103,7 @@ const PokeInfo = async () => {
       <h1>${pokemon.name}</h1>
     </div>
     <div class="poke-info__type">
-      <span><img src="" alt=""></span>
+      <span><img src="${typeIcon}" alt="${pokemon.types[0].type.name}"></span>
       <h2>${pokemon.types[0].type.name}</h2>
     </div>
   </div>
@@ -127,5 +201,3 @@ const PokeInfo = async () => {
 };
 
 export default PokeInfo;
-
-
