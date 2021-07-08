@@ -1,6 +1,6 @@
 import getData from "../utils/getData";
 import getHash from "../utils/getHash";
-import logo from "../assets/images/pokedex-logo.png";
+import logo from "../assets/images/logo-pokedex.png";
 
 const Header = async () => {
   const id = await getHash();
