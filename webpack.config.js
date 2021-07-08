@@ -5,7 +5,7 @@ const { dirname } = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -33,15 +33,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
-        type: "javascript/auto",//creo que no necesito esto ya que no estoy trabajando con assets module de webpack 5
+        type: 'asset/resource'
+        },
+      {
+        test: /\.svg/,
+        type: "asset/inline",
       },
     ],
   },
