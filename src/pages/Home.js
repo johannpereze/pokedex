@@ -1,4 +1,4 @@
-import randomId from "../utils/randomId";
+import randomId from "@utils/randomId";
 
 const Home = async () => {
   const Id = await randomId();

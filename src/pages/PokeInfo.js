@@ -1,29 +1,31 @@
-import getData from "../utils/getData";
-import getHash from "../utils/getHash";
-import getSpecies from "../utils/getSpecies";
-import heightIcon from "../assets/images/icons/height.svg";
-import categoryIcon from "../assets/images/icons/category.svg";
-import weightIcon from "../assets/images/icons/weight.svg";
-import genderIcon from "../assets/images/icons/gender.svg";
-import abilityIcon from "../assets/images/icons/ability.svg";
-import normal from "../assets/images/icons/normal.png";
-import fire from "../assets/images/icons/fire.png";
-import water from "../assets/images/icons/water.png";
-import grass from "../assets/images/icons/grass.png";
-import electric from "../assets/images/icons/electric.png";
-import ice from "../assets/images/icons/ice.png";
-import fighting from "../assets/images/icons/fighting.png";
-import poison from "../assets/images/icons/poison.png";
-import ground from "../assets/images/icons/ground.png";
-import flying from "../assets/images/icons/flying.png";
-import psychic from "../assets/images/icons/psychic.png";
-import bug from "../assets/images/icons/bug.png";
-import rock from "../assets/images/icons/rock.png";
-import ghost from "../assets/images/icons/ghost.png";
-import dark from "../assets/images/icons/dark.png";
-import dragon from "../assets/images/icons/dragon.png";
-import steel from "../assets/images/icons/steel.png";
-import fairy from "../assets/images/icons/fairy.png";
+import getData from "@utils/getData";
+import getHash from "@utils/getHash";
+import getSpecies from "@utils/getSpecies";
+import favoriteIcon from "@images/icons/favorite.svg"
+import shareIcon from "@images/icons/share.svg"
+import heightIcon from "@images/icons/height.svg";
+import categoryIcon from "@images/icons/category.svg";
+import weightIcon from "@images/icons/weight.svg";
+import genderIcon from "@images/icons/gender.svg";
+import abilityIcon from "@images/icons/ability.svg";
+import normal from "@images/icons/normal.png";
+import fire from "@images/icons/fire.png";
+import water from "@images/icons/water.png";
+import grass from "@images/icons/grass.png";
+import electric from "@images/icons/electric.png";
+import ice from "@images/icons/ice.png";
+import fighting from "@images/icons/fighting.png";
+import poison from "@images/icons/poison.png";
+import ground from "@images/icons/ground.png";
+import flying from "@images/icons/flying.png";
+import psychic from "@images/icons/psychic.png";
+import bug from "@images/icons/bug.png";
+import rock from "@images/icons/rock.png";
+import ghost from "@images/icons/ghost.png";
+import dark from "@images/icons/dark.png";
+import dragon from "@images/icons/dragon.png";
+import steel from "@images/icons/steel.png";
+import fairy from "@images/icons/fairy.png";
 
 const PokeInfo = async () => {
   const id = await getHash();
@@ -92,10 +94,10 @@ const PokeInfo = async () => {
   const view = `
   <div class="social-menu">
     <div class="social-menu__favorites">
-      <img src="./assets/images/icons/favorite.svg" alt="favorite-button">
+      <img src="${favoriteIcon}" alt="favorite-button">
     </div>
     <div class="social-menu__share">
-      <img src="./assets/images/icons/share.svg" alt="share-button">
+      <img src="${shareIcon}" alt="share-button">
     </div>
   </div>
   <div class="poke-info">
