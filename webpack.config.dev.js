@@ -1,14 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const { dirname } = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,13 +14,13 @@ module.exports = {
   },
   resolve: {
     extensions: [".js"],
-    alias:{
-      '@utils': path.resolve(__dirname, 'src/utils/'),
-      '@templates': path.resolve(__dirname, 'src/templates/'),
-      '@styles': path.resolve(__dirname, 'src/styles/'),
-      '@images': path.resolve(__dirname, 'src/assets/images/'),
-      '@routes': path.resolve(__dirname, 'src/routes/'),
-    }
+    alias: {
+      "@utils": path.resolve(__dirname, "src/utils/"),
+      "@templates": path.resolve(__dirname, "src/templates/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@images": path.resolve(__dirname, "src/assets/images/"),
+      "@routes": path.resolve(__dirname, "src/routes/"),
+    },
   },
   module: {
     rules: [
@@ -51,22 +49,6 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin({
-        minimizerOptions: {
-          preset: [
-            "default",
-            {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
-      }),
-      new TerserPlugin(),
-    ],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
@@ -84,6 +66,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "assets/[name].[contenthash].css",
     }),
-    new CleanWebpackPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerPort: 3006,
+    }),
   ],
 };
