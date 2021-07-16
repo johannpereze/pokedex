@@ -1,8 +1,9 @@
 import getData from "@utils/getData";
 import getHash from "@utils/getHash";
 import getSpecies from "@utils/getSpecies";
-import favoriteIcon from "@images/icons/favorite.svg"
-import shareIcon from "@images/icons/share.svg"
+import getGender from "@utils/getGender";
+import favoriteIcon from "@images/icons/favorite.svg";
+import shareIcon from "@images/icons/share.svg";
 import heightIcon from "@images/icons/height.svg";
 import categoryIcon from "@images/icons/category.svg";
 import weightIcon from "@images/icons/weight.svg";
@@ -26,11 +27,26 @@ import dark from "@images/icons/dark.png";
 import dragon from "@images/icons/dragon.png";
 import steel from "@images/icons/steel.png";
 import fairy from "@images/icons/fairy.png";
+const NUMBER_OF_GENDERS = 3;
+const genders = [];
+const pokemonGenders = [];
 
 const PokeInfo = async () => {
   const id = await getHash();
-  const pokemon = await getData(id); 
+  const pokemon = await getData(id);
   const species = await getSpecies(id);
+  //Obtener los géneros y guardarlos en un array
+  for (let index = 1; index < NUMBER_OF_GENDERS + 1; index++) {
+    let gender = await getGender(index);
+    genders.push(gender);
+  }
+  //tratar de buscar en todo el array si existe el nombre del pokemon para saber que se le puede asignar ese género
+  // for (let index = 0; index < genders.length; index++) {
+  //   if (genders[index][0].pokemon_species_details.includes(pokemon.name)) {
+  //     pokemonGenders.push(genders[0].name);
+  //   }
+  // }
+  //Obtener el ícono del tipo
   let typeIcon;
   switch (pokemon.types[0].type.name) {
     case "normal":
@@ -91,6 +107,8 @@ const PokeInfo = async () => {
 
   console.log(pokemon);
   console.log(species);
+  console.log(genders);
+
   const view = `
   <div class="social-menu">
     <div class="social-menu__favorites">

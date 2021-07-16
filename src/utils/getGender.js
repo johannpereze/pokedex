@@ -1,9 +1,8 @@
 const API_GENDER = "https://pokeapi.co/api/v2/gender/";
 
 //Esta es la de getData. Hay que hacerla funcionar aquí apra descargar los 3 generos y luego buscar por ID cuales le corresponden
-const getData = async (id) =>{
-  id === '/' ? id = 25 : id;
-  const apiURL = id ? `${API}${id}`: `${API}${25}`;
+const getGender = async (id) =>{
+  const apiURL = `${API_GENDER}${id}`;
   try {
       const response = await fetch(apiURL);
       const data = await response.json();
@@ -13,4 +12,4 @@ const getData = async (id) =>{
   }
 };
 
-export default getData;
+export default getGender;
