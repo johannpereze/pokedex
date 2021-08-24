@@ -2,6 +2,7 @@ import getData from "@utils/getData";
 import getHash from "@utils/getHash";
 import getSpecies from "@utils/getSpecies";
 import getGender from "@utils/getGender";
+import possibleGenders from "@utils/possibleGenders";
 import favoriteIcon from "@images/icons/favorite.svg";
 import shareIcon from "@images/icons/share.svg";
 import heightIcon from "@images/icons/height.svg";
@@ -40,6 +41,11 @@ const PokeInfo = async () => {
     let gender = await getGender(index);
     genders.push(gender);
   }
+
+  
+
+  console.log("Posibles Géneros: ", possibleGenders(pokemon, genders));
+
   //tratar de buscar en todo el array si existe el nombre del pokemon para saber que se le puede asignar ese género
   // for (let index = 0; index < genders.length; index++) {
   //   if (genders[index][0].pokemon_species_details.includes(pokemon.name)) {
@@ -105,9 +111,9 @@ const PokeInfo = async () => {
       break;
   }
 
-  console.log(pokemon);
-  console.log(species);
-  console.log(genders);
+  console.log("pokemon: ", pokemon);
+  console.log("species: ", species);
+  console.log("genders: ", genders);
 
   const view = `
   <div class="social-menu">
