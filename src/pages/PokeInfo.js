@@ -1,7 +1,7 @@
 import getData from "@utils/getData";
 import getHash from "@utils/getHash";
 import getSpecies from "@utils/getSpecies";
-import getGender from "@utils/getGender";
+import getGenders from "@utils/getGender";
 import possibleGenders from "@utils/possibleGenders";
 import favoriteIcon from "@images/icons/favorite.svg";
 import shareIcon from "@images/icons/share.svg";
@@ -28,7 +28,7 @@ import dark from "@images/icons/dark.png";
 import dragon from "@images/icons/dragon.png";
 import steel from "@images/icons/steel.png";
 import fairy from "@images/icons/fairy.png";
-const NUMBER_OF_GENDERS = 3;
+
 const genders = [];
 const pokemonGenders = [];
 
@@ -36,11 +36,7 @@ const PokeInfo = async () => {
   const id = await getHash();
   const pokemon = await getData(id);
   const species = await getSpecies(id);
-  //Obtener los géneros y guardarlos en un array
-  for (let index = 1; index < NUMBER_OF_GENDERS + 1; index++) {
-    let gender = await getGender(index);
-    genders.push(gender);
-  }
+  const genders = await getGenders(id)
 
   
 
