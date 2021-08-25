@@ -17,9 +17,9 @@
       text-transform: capitalize;
       margin-top: 5px;
     }
-    span{
+    span {
       margin: 0 5px;
-      img{
+      img {
         filter: $icon-shadow;
       }
     }
@@ -68,7 +68,7 @@
       background-size: 60%;
       background-repeat: no-repeat;
       background-position: center;
-      
+
       // background-image: url("../assets/images/pokedex-logo.png"); esta propiedad la puse en el tag del template
     }
     //esto está muy feo. Lo tengo que arreglar
@@ -97,6 +97,8 @@
       }
     }
     &--value {
+      display: flex;
+      justify-content: center;
       h3 {
         @include h3;
         color: $color-main;
@@ -104,6 +106,9 @@
         margin: 2px 27px 10px 27px;
         white-space: nowrap;
         text-align: center;
+      }
+      img {
+        margin: 0 .5rem;
       }
     }
   }

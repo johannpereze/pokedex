@@ -2,7 +2,7 @@ import getData from "@utils/getData";
 import getHash from "@utils/getHash";
 import getSpecies from "@utils/getSpecies";
 import getGenders from "@utils/getGender";
-import possibleGenders from "@utils/possibleGenders";
+import getPossibleGenders from "@utils/getPossibleGenders";
 import favoriteIcon from "@images/icons/favorite.svg";
 import shareIcon from "@images/icons/share.svg";
 import heightIcon from "@images/icons/height.svg";
@@ -28,6 +28,9 @@ import dark from "@images/icons/dark.png";
 import dragon from "@images/icons/dragon.png";
 import steel from "@images/icons/steel.png";
 import fairy from "@images/icons/fairy.png";
+import genderMale from "@images/icons/gender_male.svg";
+import genderFemale from "@images/icons/gender_female.svg";
+import genderless from "@images/icons/genderless.svg";
 
 const genders = [];
 const pokemonGenders = [];
@@ -36,18 +39,25 @@ const PokeInfo = async () => {
   const id = await getHash();
   const pokemon = await getData(id);
   const species = await getSpecies(id);
-  const genders = await getGenders(id)
-
+  const genders = await getGenders(id);
+  const possibleGenders = getPossibleGenders(pokemon, genders);
   
+  console.log("Posibles Géneros: ", possibleGenders); //este log hay que borrarlo
+  
+  //Obtener los generos:
+  
+  const renderGenders = (possibleGenders) => {
+    if (possibleGenders.length === 1) {
+      if (possibleGenders[0] === "genderless") return `<img src="${genderless}" alt="genderless" title="Genderless">`
+      if (possibleGenders[0] === "male") return `<img src="${genderMale}" alt="gender male" title="male">`;
+      if (possibleGenders[0] === "female") return `<img src="${genderFemale}" alt="gender female" title="female">`;
+    } else {
+      return `<img src="${genderMale}" alt="gender male" title="male"><img src="${genderFemale}" alt="gender female" title="female">`
+    }
+  };
+  
+  const renderedGenders = renderGenders(possibleGenders);
 
-  console.log("Posibles Géneros: ", possibleGenders(pokemon, genders));
-
-  //tratar de buscar en todo el array si existe el nombre del pokemon para saber que se le puede asignar ese género
-  // for (let index = 0; index < genders.length; index++) {
-  //   if (genders[index][0].pokemon_species_details.includes(pokemon.name)) {
-  //     pokemonGenders.push(genders[0].name);
-  //   }
-  // }
   //Obtener el ícono del tipo
   let typeIcon;
   switch (pokemon.types[0].type.name) {
@@ -155,9 +165,8 @@ const PokeInfo = async () => {
       <div class="characteristics__container">
         <span class="characteristics__container--icon4 characteristics__container--icon" style="background-image: url(${genderIcon});"></span>
         <div class="characteristics__container--name"><h2>Gender</h2></div>
-        <div class="characteristics__container--value"><h3>${
-          pokemon.name
-        }</h3></div>
+        <div class="characteristics__container--value">
+          ${renderedGenders}</div>
       </div>
       <div class="characteristics__container">
         <span class="characteristics__container--icon5 characteristics__container--icon" style="background-image: url(${abilityIcon});"></span>

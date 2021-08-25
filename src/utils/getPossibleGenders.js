@@ -1,4 +1,4 @@
-const possibleGenders = (pokemon, genders) => {
+const getPossibleGenders = (pokemon, genders) => {
   const thisIdGender = [];
   let actualGender;
   genders.forEach((element) => {
@@ -12,4 +12,4 @@ const possibleGenders = (pokemon, genders) => {
   return thisIdGender;
 };
 
-export default possibleGenders;
+export default getPossibleGenders;
