@@ -174,36 +174,62 @@ const PokeInfo = async () => {
     <div class="stats__title">
       <h2>Statistics</h2>
     </div>
-    <div class="stats__container"><div class="stats__name">
-      <h3>HP:</h3>
-      
-    </div><div class="stats__value">
+    <div class="stats__container">
+      <div class="stats__name">
+        <h3>HP:</h3>      
+      </div>
+      <div class="stats__value">
         <h3>${pokemon.stats[0].base_stat}</h3>
-      </div></div>
+      </div>
+    </div>
+      <div class="stats-bar__container">
+        <div class="stats-bar stats-bar--blank">
+          <div class="stats-bar stats-bar--1"></div>
+      </div>
+    </div>
     <div class="stats__container"><div class="stats__name">
-      <h3>Attack:</h3>
-      
+      <h3>Attack:</h3>      
     </div><div class="stats__value">
         <h3>${pokemon.stats[1].base_stat}</h3>
       </div></div>
+      <div class="stats-bar__container">
+        <div class="stats-bar stats-bar--blank">
+          <div class="stats-bar stats-bar--2"></div>
+      </div>
+    </div>
     <div class="stats__container"><div class="stats__name">
       <h3>Defense:</h3>
       
     </div><div class="stats__value">
         <h3>${pokemon.stats[2].base_stat}</h3>
       </div></div>
+      <div class="stats-bar__container">
+        <div class="stats-bar stats-bar--blank">
+          <div class="stats-bar stats-bar--3"></div>
+      </div>
+    </div>
     <div class="stats__container"><div class="stats__name">
       <h3>Special Attack:</h3>
       
     </div><div class="stats__value">
         <h3>${pokemon.stats[3].base_stat}</h3>
       </div></div>
+      <div class="stats-bar__container">
+        <div class="stats-bar stats-bar--blank">
+          <div class="stats-bar stats-bar--4"></div>
+      </div>
+    </div>
     <div class="stats__container"><div class="stats__name">
       <h3>Special Defense:</h3>
       
     </div><div class="stats__value">
         <h3>${pokemon.stats[4].base_stat}</h3>
       </div></div>
+      <div class="stats-bar__container">
+        <div class="stats-bar stats-bar--blank">
+          <div class="stats-bar stats-bar--5"></div>
+      </div>
+    </div>
     <div class="stats__container"><div class="stats__name">
       <h3>Speed:</h3>
       
@@ -211,6 +237,11 @@ const PokeInfo = async () => {
         <h3>${pokemon.stats[5].base_stat}</h3>
       </div></div>    
   </div>
+  <div class="stats-bar__container">
+    <div class="stats-bar stats-bar--blank">
+      <div class="stats-bar stats-bar--6"></div>
+  </div>
+</div>
 </section>
     `;
   return view;
