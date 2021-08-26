@@ -4,6 +4,7 @@ import getSpecies from "@utils/getSpecies";
 import getGenders from "@utils/getGender";
 import getPossibleGenders from "@utils/getPossibleGenders";
 import renderGenders from "@utils/renderGenders";
+
 import favoriteIcon from "@images/icons/favorite.svg";
 import shareIcon from "@images/icons/share.svg";
 import heightIcon from "@images/icons/height.svg";
@@ -33,7 +34,7 @@ import fairy from "@images/icons/fairy.png";
 const genders = [];
 const pokemonGenders = [];
 
-const PokeInfo = async () => {
+export const PokeInfo = async () => {
   const id = await getHash();
   const pokemon = await getData(id);
   const species = await getSpecies(id);
@@ -41,7 +42,12 @@ const PokeInfo = async () => {
   const possibleGenders = getPossibleGenders(pokemon, genders);
   const renderedGenders = renderGenders(possibleGenders);
 
-  console.log("Posibles Géneros: ", possibleGenders);
+  const width1 = `style="width: ${(pokemon.stats[0].base_stat / 255)* 100}%;"`
+  const width2 = `style="width: ${(pokemon.stats[1].base_stat / 255)* 100}%;"`
+  const width3 = `style="width: ${(pokemon.stats[2].base_stat / 255)* 100}%;"`
+  const width4 = `style="width: ${(pokemon.stats[3].base_stat / 255)* 100}%;"`
+  const width5 = `style="width: ${(pokemon.stats[4].base_stat / 255)* 100}%;"`
+  const width6 = `style="width: ${(pokemon.stats[5].base_stat / 255)* 100}%;"`
 
   //Obtener el ícono del tipo
   let typeIcon;
@@ -103,8 +109,8 @@ const PokeInfo = async () => {
   }
 
   console.log("pokemon: ", pokemon);
-  console.log("species: ", species);
-  console.log("genders: ", genders);
+  // console.log("species: ", species);
+  // console.log("genders: ", genders);
 
   const view = `
   <div class="social-menu">
@@ -184,7 +190,7 @@ const PokeInfo = async () => {
     </div>
       <div class="stats-bar__container">
         <div class="stats-bar stats-bar--blank">
-          <div class="stats-bar stats-bar--1"></div>
+          <div class="stats-bar stats-bar--1" ${width1}></div>
       </div>
     </div>
     <div class="stats__container"><div class="stats__name">
@@ -194,7 +200,7 @@ const PokeInfo = async () => {
       </div></div>
       <div class="stats-bar__container">
         <div class="stats-bar stats-bar--blank">
-          <div class="stats-bar stats-bar--2"></div>
+          <div class="stats-bar stats-bar--2" ${width2}></div>
       </div>
     </div>
     <div class="stats__container"><div class="stats__name">
@@ -205,7 +211,7 @@ const PokeInfo = async () => {
       </div></div>
       <div class="stats-bar__container">
         <div class="stats-bar stats-bar--blank">
-          <div class="stats-bar stats-bar--3"></div>
+          <div class="stats-bar stats-bar--3" ${width3}></div>
       </div>
     </div>
     <div class="stats__container"><div class="stats__name">
@@ -216,7 +222,7 @@ const PokeInfo = async () => {
       </div></div>
       <div class="stats-bar__container">
         <div class="stats-bar stats-bar--blank">
-          <div class="stats-bar stats-bar--4"></div>
+          <div class="stats-bar stats-bar--4" ${width4}></div>
       </div>
     </div>
     <div class="stats__container"><div class="stats__name">
@@ -227,7 +233,7 @@ const PokeInfo = async () => {
       </div></div>
       <div class="stats-bar__container">
         <div class="stats-bar stats-bar--blank">
-          <div class="stats-bar stats-bar--5"></div>
+          <div class="stats-bar stats-bar--5" ${width5}></div>
       </div>
     </div>
     <div class="stats__container"><div class="stats__name">
@@ -239,7 +245,7 @@ const PokeInfo = async () => {
   </div>
   <div class="stats-bar__container">
     <div class="stats-bar stats-bar--blank">
-      <div class="stats-bar stats-bar--6"></div>
+      <div class="stats-bar stats-bar--6" ${width6}></div>
   </div>
 </div>
 </section>
