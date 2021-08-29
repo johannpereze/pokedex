@@ -42,6 +42,7 @@
     flex-direction: column;
     width: 90%;
     margin: 30px auto;
+    padding: 25px 10px;
     @include box-default;
   }
 }
@@ -151,7 +152,7 @@
   &__title {
     h2 {
       @include h2;
-      margin: 20px 20px 20px 20px;
+      margin: 0 20px;
     }
   }
   &__name {
