@@ -108,7 +108,7 @@ export const PokeInfo = async () => {
       break;
   }
 
-  console.log("pokemon: ", pokemon);
+  // console.log("pokemon: ", pokemon);
   // console.log("species: ", species);
   // console.log("genders: ", genders);
 
